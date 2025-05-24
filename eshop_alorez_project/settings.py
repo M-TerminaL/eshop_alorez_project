@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Internal apps
     'home_module',
+    'product_module',
     # External apps
     'django_render_partial',
 ]

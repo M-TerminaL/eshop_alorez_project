@@ -11,5 +11,6 @@ def index_page(request):
 def site_header_component(request: HttpRequest):
     return render(request, 'shared/site_header_component.html')
 
+
 def site_footer_component(request: HttpRequest):
     return render(request, 'shared/site_footer_component.html')
