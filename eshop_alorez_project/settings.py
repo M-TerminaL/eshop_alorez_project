@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Internal apps
     'home_module',
     # External apps
+    'django_render_partial',
 ]
 
 MIDDLEWARE = [
