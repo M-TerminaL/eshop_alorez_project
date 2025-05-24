@@ -141,7 +141,8 @@ env.bak/
 venv.bak/
 
 # Static
-static/
+static/image/
+static/fonts/
 
 # Spyder project settings
 .spyderproject
