@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'product_module',
     # External apps
     'django_render_partial',
-    'jalali_date'
+    'jalali_date',
+
 ]
 
 MIDDLEWARE = [
@@ -78,10 +79,21 @@ WSGI_APPLICATION = 'eshop_alorez_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'e_alorezdb',
+        'USER': 'alorez_dev',
+        'PASSWORD': 'Edmonara123',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 

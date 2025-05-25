@@ -1,0 +1,1001 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-05-24T16:34:09.564Z",
+        "user": 1,
+        "content_type": 19,
+        "object_id": "1",
+        "object_repr": "mobile",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-05-24T16:34:20.048Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "سامسونگ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-05-24T16:35:59.974Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "علیرضا",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-05-24T16:37:06.452Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "سامسونگ گلکسی اس 20",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u062a\\u0635\\u0648\\u06cc\\u0631 \\u0645\\u062d\\u0635\\u0648\\u0644\", \"object\": \"1\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-05-24T23:39:46.917Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u062a\\u0635\\u0648\\u06cc\\u0631 \\u0645\\u062d\\u0635\\u0648\\u0644\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add محصول",
+        "content_type": 7,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change محصول",
+        "content_type": 7,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete محصول",
+        "content_type": 7,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view محصول",
+        "content_type": 7,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add برند",
+        "content_type": 8,
+        "codename": "add_productbrand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change برند",
+        "content_type": 8,
+        "codename": "change_productbrand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete برند",
+        "content_type": 8,
+        "codename": "delete_productbrand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view برند",
+        "content_type": 8,
+        "codename": "view_productbrand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add نظر یا کامنت",
+        "content_type": 9,
+        "codename": "add_productcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change نظر یا کامنت",
+        "content_type": 9,
+        "codename": "change_productcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete نظر یا کامنت",
+        "content_type": 9,
+        "codename": "delete_productcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view نظر یا کامنت",
+        "content_type": 9,
+        "codename": "view_productcomment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add فروشنده",
+        "content_type": 10,
+        "codename": "add_seller"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change فروشنده",
+        "content_type": 10,
+        "codename": "change_seller"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete فروشنده",
+        "content_type": 10,
+        "codename": "delete_seller"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view فروشنده",
+        "content_type": 10,
+        "codename": "view_seller"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add نقطه ضعف کالا",
+        "content_type": 11,
+        "codename": "add_weak"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change نقطه ضعف کالا",
+        "content_type": 11,
+        "codename": "change_weak"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete نقطه ضعف کالا",
+        "content_type": 11,
+        "codename": "delete_weak"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view نقطه ضعف کالا",
+        "content_type": 11,
+        "codename": "view_weak"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add نقطه قوت کالا",
+        "content_type": 12,
+        "codename": "add_strength"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change نقطه قوت کالا",
+        "content_type": 12,
+        "codename": "change_strength"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete نقطه قوت کالا",
+        "content_type": 12,
+        "codename": "delete_strength"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view نقطه قوت کالا",
+        "content_type": 12,
+        "codename": "view_strength"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add تصویر محصول",
+        "content_type": 13,
+        "codename": "add_slider"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change تصویر محصول",
+        "content_type": 13,
+        "codename": "change_slider"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete تصویر محصول",
+        "content_type": 13,
+        "codename": "delete_slider"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view تصویر محصول",
+        "content_type": 13,
+        "codename": "view_slider"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add توضیحات بیشتر مشخصه کالا",
+        "content_type": 14,
+        "codename": "add_productspecificationdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change توضیحات بیشتر مشخصه کالا",
+        "content_type": 14,
+        "codename": "change_productspecificationdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete توضیحات بیشتر مشخصه کالا",
+        "content_type": 14,
+        "codename": "delete_productspecificationdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view توضیحات بیشتر مشخصه کالا",
+        "content_type": 14,
+        "codename": "view_productspecificationdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add ویژگی کالا",
+        "content_type": 15,
+        "codename": "add_productspecification"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change ویژگی کالا",
+        "content_type": 15,
+        "codename": "change_productspecification"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete ویژگی کالا",
+        "content_type": 15,
+        "codename": "delete_productspecification"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view ویژگی کالا",
+        "content_type": 15,
+        "codename": "view_productspecification"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add سایز محصول",
+        "content_type": 16,
+        "codename": "add_productsize"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change سایز محصول",
+        "content_type": 16,
+        "codename": "change_productsize"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete سایز محصول",
+        "content_type": 16,
+        "codename": "delete_productsize"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view سایز محصول",
+        "content_type": 16,
+        "codename": "view_productsize"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add توضیحات کالا",
+        "content_type": 17,
+        "codename": "add_productdescription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change توضیحات کالا",
+        "content_type": 17,
+        "codename": "change_productdescription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete توضیحات کالا",
+        "content_type": 17,
+        "codename": "delete_productdescription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view توضیحات کالا",
+        "content_type": 17,
+        "codename": "view_productdescription"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add رنگ محصول",
+        "content_type": 18,
+        "codename": "add_productcolor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change رنگ محصول",
+        "content_type": 18,
+        "codename": "change_productcolor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete رنگ محصول",
+        "content_type": 18,
+        "codename": "delete_productcolor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view رنگ محصول",
+        "content_type": 18,
+        "codename": "view_productcolor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add دسته بندی",
+        "content_type": 19,
+        "codename": "add_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change دسته بندی",
+        "content_type": 19,
+        "codename": "change_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete دسته بندی",
+        "content_type": 19,
+        "codename": "delete_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view دسته بندی",
+        "content_type": 19,
+        "codename": "view_productcategory"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$hUd6IXYryDjflL82u5TjCj$JlYXY6j6zuZ3VeeUj7HzejmyXn5psy05j3k/mGQPVBY=",
+        "last_login": "2025-05-24T16:25:33.899Z",
+        "is_superuser": true,
+        "username": "alireza",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-24T16:00:59.597Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "product_module",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productbrand"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productcomment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "product_module",
+        "model": "seller"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "product_module",
+        "model": "weak"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "product_module",
+        "model": "strength"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "product_module",
+        "model": "slider"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productspecificationdetails"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productspecification"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productsize"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productdescription"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productcolor"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "product_module",
+        "model": "productcategory"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "943q4m8wp1sjam00ex6psibjnhsk771v",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyGlWwrr0Xu_gSywSNVAUtqT8d9tkx70Npn3Zt7C0bZmtzVe3BzFVShx-e08hSeXA8QHlXuVoZZ1mb08FHnSJqca-XU73b-DTC3va21sD6P1SGwxeR8RElgcB6s7pbEzRGy0grgnZo2JQw9DYoZEiQjF5wvVPThU:1uIrgk:cOfF-_2HQMHboSp501__zAXo1bU74ihkJHJjnCRm_js",
+        "expire_date": "2025-06-07T16:25:34.143Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "sw0ut7dhi7lkdybbo9gkfeg70ik0k7oi",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyGlWwrr0Xu_gSywSNVAUtqT8d9tkx70Npn3Zt7C0bZmtzVe3BzFVShx-e08hSeXA8QHlXuVoZZ1mb08FHnSJqca-XU73b-DTC3va21sD6P1SGwxeR8RElgcB6s7pbEzRGy0grgnZo2JQw9DYoZEiQjF5wvVPThU:1uIrJQ:rWEa98sw1fAxxnkuIQhAeBVgTrRxBnJ5JRmPnfScffo",
+        "expire_date": "2025-06-07T16:01:28.384Z"
+    }
+},
+{
+    "model": "product_module.productcategory",
+    "pk": 1,
+    "fields": {
+        "fa_title": "گوشی موبایل",
+        "en_title": "mobile",
+        "url_title": "mobile",
+        "parent": null,
+        "is_active": true,
+        "is_delete": false
+    }
+},
+{
+    "model": "product_module.productbrand",
+    "pk": 1,
+    "fields": {
+        "fa_brand": "سامسونگ",
+        "en_brand": "samsung",
+        "url_title": "samsung"
+    }
+},
+{
+    "model": "product_module.seller",
+    "pk": 1,
+    "fields": {
+        "name": "علیرضا",
+        "location": "تهران",
+        "card": 5022
+    }
+},
+{
+    "model": "product_module.product",
+    "pk": 1,
+    "fields": {
+        "fa_title": "سامسونگ گلکسی اس 20",
+        "en_title": "samsung galaxy s 20",
+        "short_title": "samsung galaxy s 20",
+        "url_title": "samsung-galaxy-s-20",
+        "brand": 1,
+        "seller": 1,
+        "inventory": 12,
+        "price": 100000,
+        "off": 20,
+        "new_price": 80000,
+        "identify": "sms-12k$22",
+        "description": "این کالا به تازگی معرفی شده",
+        "created_at": "2025-05-24T16:37:06.329Z",
+        "updated_at": "2025-05-24T16:37:06.329Z",
+        "is_active": true,
+        "is_delete": false,
+        "category": [
+            1
+        ]
+    }
+},
+{
+    "model": "product_module.slider",
+    "pk": 1,
+    "fields": {
+        "image": "shop/products/product_images/2025/05/25/20250204_163931.jpg",
+        "product": 1,
+        "created_at": "2025-05-24T16:37:06.424Z"
+    }
+}
+]
