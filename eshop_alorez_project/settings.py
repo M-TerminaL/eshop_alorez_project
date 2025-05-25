@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # External apps
     'django_render_partial',
     'jalali_date',
+    'rest_framework',
 
 ]
 
