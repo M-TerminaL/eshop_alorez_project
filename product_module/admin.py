@@ -71,7 +71,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_editable = ['is_active', 'off', 'inventory', 'brand']
     list_per_page = 20
     prepopulated_fields = {
-        'url_title': ['short_title']
+        'slug': ['short_title']
     }
     search_fields = ['fa_title', 'en_title', 'short_title', 'off', 'new_price', 'price']
     inlines = [SliderInline, ProductSpecificationInline, ProductColorInline, ProductSizeInline,

@@ -57,7 +57,7 @@ class Product(models.Model):
     fa_title = models.CharField(max_length=400, verbose_name='نام کالا به فارسی')
     en_title = models.CharField(max_length=400, verbose_name='نام کالا به انگلیسی')
     short_title = models.CharField(max_length=100, verbose_name='عنوان کوتاه')
-    url_title = models.SlugField(max_length=300, verbose_name='عنوان در url', allow_unicode=True, unique=True,
+    slug = models.SlugField(max_length=300, verbose_name='عنوان در url', allow_unicode=True, unique=True,
                                  db_index=True, null=True, blank=True, default='')
     category = models.ManyToManyField(ProductCategory, verbose_name='دسته بندی کالا', related_name='products')
     brand = models.ForeignKey(to=ProductBrand, on_delete=models.CASCADE, verbose_name='برند کالا',
