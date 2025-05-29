@@ -190,7 +190,7 @@ class Strength(models.Model):
 
 class Weak(models.Model):
     comment = models.ForeignKey(to=ProductComment, on_delete=models.CASCADE, verbose_name='نظر',
-                                related_name='weaks')
+                                related_name='weak')
     value = models.CharField(max_length=20, verbose_name='نقطه ضعف کالا')
 
     def __str__(self):
