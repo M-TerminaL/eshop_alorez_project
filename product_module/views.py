@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView
 from .models import Product
 from rest_framework import generics
-from .serializers import ProductSerializer
+from .serializers import ProductDetailSerializer
 
 
 # Create your views here.
@@ -44,5 +44,5 @@ class ProductDetailView(DetailView):
 
 class ProductDetailGenericApiView(generics.RetrieveAPIView):
     queryset = Product.objects.filter(is_active=True, is_delete=False)
-    serializer_class = ProductSerializer
+    serializer_class = ProductDetailSerializer
     lookup_field = 'slug'

@@ -78,7 +78,7 @@ class ProductSpecificationDetailsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ProductSerializer(serializers.ModelSerializer):
+class ProductDetailSerializer(serializers.ModelSerializer):
     sliders = SliderSerializer(read_only=True, many=True)
     product_specifications = ProductSpecificationSerializer(read_only=True, many=True)
     product_color = ProductColorSerializer(read_only=True, many=True)
