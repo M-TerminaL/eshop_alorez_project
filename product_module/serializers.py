@@ -86,6 +86,9 @@ class ProductSerializer(serializers.ModelSerializer):
     comments = ProductCommentSerializer(read_only=True, many=True)
     product_desc = ProductDescriptionSerializer(read_only=True, many=False)
     pdc_spc_details = ProductSpecificationDetailsSerializer(read_only=True, many=True)
+    category = ProductCategorySerializer(read_only=True, many=True)
+    brand = ProductBrandSerializer(read_only=True, many=False)
+    seller = SellerSerializer(read_only=True, many=False)
 
     class Meta:
         model = models.Product
