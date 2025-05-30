@@ -141,8 +141,8 @@ env.bak/
 venv.bak/
 
 # Static
-static/image/
-static/fonts/
+/static/image/
+/static/fonts/
 
 # Uploads
 /uploads/
