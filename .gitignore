@@ -144,6 +144,9 @@ venv.bak/
 static/image/
 static/fonts/
 
+# Uploads
+uploads/
+
 # Spyder project settings
 .spyderproject
 .spyproject
