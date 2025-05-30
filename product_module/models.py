@@ -22,7 +22,7 @@ class ProductCategory(models.Model):
         ]
 
     def __str__(self):
-        return self.en_title
+        return self.fa_title
 
 
 class ProductBrand(models.Model):
