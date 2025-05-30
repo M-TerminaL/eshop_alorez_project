@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-
+from django.utils.crypto import get_random_string
 
 # Create your models here.
 class ProductCategory(models.Model):
@@ -68,7 +68,7 @@ class Product(models.Model):
     off = models.IntegerField(verbose_name='درصد تخفیف', help_text='مقدار عددی وارد شود', default=0)
     new_price = models.IntegerField(verbose_name='قیمت با تخفیف', null=True, blank=True,
                                     help_text='این فیلد به صورت خودکار جنریت میشود.')
-    identify = models.CharField(max_length=12, verbose_name='شناسه کالا',
+    identify = models.CharField(max_length=8, verbose_name='شناسه کالا', null=False, default='', blank=True, unique=True,
                                 help_text='این فیلد به صورت خودکار جنریت میشود.')
     description = models.TextField(verbose_name='توضیحات کالا')
     created_at = models.DateTimeField(verbose_name='تاریخ ایجاد', auto_now_add=True)
@@ -87,10 +87,9 @@ class Product(models.Model):
     def __str__(self):
         return self.fa_title
 
-    # def save(self, *args, **kwargs):
-    #     self.url_title = slugify('short_title')
-    #     return super().save(*args, **kwargs)
-
+    def save(self, *args, **kwargs):
+        self.identify = get_random_string(length=8)
+        return super().save(*args, **kwargs)
 
 class Slider(models.Model):
     image = models.ImageField(upload_to='shop/products/product_images/%Y/%m/%d', verbose_name='تصویر محصول')
