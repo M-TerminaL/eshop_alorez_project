@@ -145,7 +145,7 @@ static/image/
 static/fonts/
 
 # Uploads
-uploads/
+/uploads/
 
 # Spyder project settings
 .spyderproject
