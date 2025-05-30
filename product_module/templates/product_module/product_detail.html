@@ -58,7 +58,6 @@
                                         <div class="swiper product-gallery">
                                             <div class="swiper-wrapper" title="برای بزرگنمایی تصویر دابل کلیک کنید">
 
-
                                                 {% for slider in product.sliders.all %}
                                                     <div class="swiper-slide">
                                                         <div class="swiper-zoom-container">
@@ -68,44 +67,6 @@
                                                     </div>
                                                 {% endfor %}
 
-
-
-                                                {% comment %}<div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid" src="/static/image/product/wach1.jpg"
-                                                             alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid" src="/static/image/product/wach2.jpg"
-                                                             alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid" src="/static/image/product/wach3.jpg"
-                                                             alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid" src="/static/image/product/wach4.jpg"
-                                                             alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid"
-                                                             src="/static/image/product/television3.jpg" alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="swiper-zoom-container">
-                                                        <img class="img-fluid"
-                                                             src="/static/image/product/television4.jpg" alt=""/>
-                                                    </div>
-                                                </div>{% endcomment %}
                                             </div>
                                             <div class="swiper-button-next d-none d-lg-flex"></div>
                                             <div class="swiper-button-prev d-none d-lg-flex"></div>
@@ -114,26 +75,14 @@
                                     </div>
                                     <div class="swiper product-gallery-thumb">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/wach1.jpg" alt=""/>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/wach2.jpg" alt=""/>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/wach3.jpg" alt=""/>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/wach4.jpg" alt=""/>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/television3.jpg"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="img-fluid" src="/static/image/product/television4.jpg"
-                                                     alt=""/>
-                                            </div>
+
+
+                                            {% for slider in product.sliders.all %}
+                                                <div class="swiper-slide">
+                                                    <img class="img-fluid" src="{{ slider.image.url }}"
+                                                         alt=""/>
+                                                </div>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                     <div class="icon-product-box">
@@ -167,10 +116,9 @@
                                     <div class="col-lg-10">
                                         <h4 class="mb-0"><a href="" class="main-color-one-color h6">گوشی موبایل</a></h4>
                                         <h4 class="f-800 my-1">
-                                            ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                            {{ product.fa_title }}
                                         </h4>
-                                        <p class="text-muted">Samsung smart watch model Galaxy Watch3 SM-R840 45mm
-                                            leather strap</p>
+                                        <p class="text-muted">{{ product.en_title}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +141,7 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a href="" class="nav-link font-16 text-muted"><span
-                                                        class="fw-bold font-16">شناسه محصول:</span> apple-13pak#-2</a>
+                                                        class="fw-bold font-16">شناسه محصول:</span> {{ product.identify }}</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -205,38 +153,12 @@
                                             <div class="se-desc">
                                                 <input type="checkbox" class="read-more-state" id="readMore1">
                                                 <ul class="read-more-wrap navbar-nav">
-                                                    <li>
-                                                        <span class="title">سری پردازنده:</span>
-                                                        <span class="desc">Core i7</span>
+                                                    {% for specification in product.product_specifications.all %}
+                                                    <li class="{% if forloop.counter > 3 %}read-more-target{% endif %}">
+                                                        <span class="title">{{ specification.key }} :</span>
+                                                        <span class="desc">{{ specification.value }}</span>
                                                     </li>
-                                                    <li>
-                                                        <span class="title">مقدار رم:</span>
-                                                        <span class="desc">16 گیگابایت</span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="title">حافظه داخلی:</span>
-                                                        <span class="desc">512 گیگابایت</span>
-                                                    </li>
-                                                    <li class="read-more-target">
-                                                        <span class="title">شبکه های ارتباطی:</span>
-                                                        <span class="desc">بدون سیم کارت</span>
-                                                    </li>
-                                                    <li class="read-more-target">
-                                                        <span class="title">رابط ها:</span>
-                                                        <span class="desc">جک 3.5 میلیمتری صدا</span>
-                                                    </li>
-                                                    <li class="read-more-target">
-                                                        <span class="title">محدوده عملکرد:</span>
-                                                        <span class="desc">10 متر</span>
-                                                    </li>
-                                                    <li class="read-more-target">
-                                                        <span class="title">عمر باتری:</span>
-                                                        <span class="desc">4.5 ساعت</span>
-                                                    </li>
-                                                    <li class="read-more-target">
-                                                        <span class="title">نوع گوشی:</span>
-                                                        <span class="desc">2 گوشی</span>
-                                                    </li>
+                                                    {% endfor %}
                                                 </ul>
                                                 <label for="readMore1" class="read-more-trigger"></label>
                                             </div>
