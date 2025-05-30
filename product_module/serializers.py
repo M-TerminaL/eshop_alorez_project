@@ -84,7 +84,7 @@ class ProductSerializer(serializers.ModelSerializer):
     product_color = ProductColorSerializer(read_only=True, many=True)
     product_size = ProductSizeSerializer(read_only=True, many=True)
     comments = ProductCommentSerializer(read_only=True, many=True)
-    product_desc = ProductDescriptionSerializer(read_only=True, many=True)
+    product_desc = ProductDescriptionSerializer(read_only=True, many=False)
     pdc_spc_details = ProductSpecificationDetailsSerializer(read_only=True, many=True)
 
     class Meta:
