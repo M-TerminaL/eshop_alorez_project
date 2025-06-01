@@ -1,0 +1,1176 @@
+{% extends 'shared/_layout.html' %}
+
+{% block title %}
+    لیست محصولات
+{% endblock %}
+
+{% block header_references %}
+    <link rel="stylesheet" href="/static/plugin/bootstrap-slider/bootstrap-slider.min.css">
+{% endblock %}
+
+
+{% block content %}
+    <!--============ start bread crumb ==============-->
+
+    <section class="bread-crumb">
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb" class="my-lg-0 my-2">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="font-14 text-muted-two" href="#">خانه</a></li>
+                    <li class="breadcrumb-item"><a class="font-14 text-muted-two" href="#">فروشگاه</a></li>
+                    <li class="breadcrumb-item"><a class="font-14 text-muted-two" href="#">گوشی هوشمند</a></li>
+                    <li aria-current="page" class="breadcrumb-item active main-color-one-color font-14 fw-bold">گوشی
+                        شیائومی
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!--============ end bread crumb ==============-->
+
+    <!--============ start section top category ==============-->
+
+    <section class="main-category py-20">
+        <div class="container-fluid">
+            <div class="parent">
+                <div class="row justify-content-center">
+                    <div class="main-category-title">
+                        <div class="slider-title">
+                            <div class="slider-title-desc">
+                                <div class="slider-title-title mb-4">
+                                    <h2 class="h3"> دسته بندی های <span
+                                            class="main-color-one-color title-font"> مرتبط</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/fashion.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">پیراهن</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">87</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/tshirt.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">لیاس بچگانه</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">87</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/denim-shorts.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">شورت</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">23</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/shoes.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">لباس</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">123</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/clothes2.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">لباس مجلسی</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">87</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-6 mb-3">
+                        <a href="category.html">
+                            <div class="item">
+                                <div class="image">
+                                    <img src="/static/image/category/clothes1.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="title mt-2">
+                                    <h6 class="font-14">لباس</h6>
+                                </div>
+                                <div class="hover">
+                                    <span class="badge rounded-pill bg-dark font-14">87</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============ end section top category ==============-->
+
+    <!--============ start main content ==============-->
+
+    <main class="category-page">
+        <div class="container-fluid">
+            <div class="content">
+                <!-- start filter in mobile -->
+                <div class="custom-filter d-lg-none d-block">
+                    <button class="btn btn-filter-float border-0 btn-dark shadow-box px-3 rounded-3 position-fixed"
+                            style="z-index: 999;bottom:75px;" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="bi bi-funnel font-20 fw-bold text-white"></i>
+                        <span class="d-block font-14 text-white">فیلتر</span>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight"
+                         aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel1">فیلتر ها</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="item-boxs position-sticky top-0">
+                                <div class="item-box">
+                                    <div class="title">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="font-14">فیلتر های اعمال شده</h6>
+                                            <a class="btn border-0" data-bs-toggle="collapse" href="#collapseItemBox1"
+                                               role="button" aria-expanded="false">
+                                                <i class="bi bi-chevron-down"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="desc collapse show" id="collapseItemBox1">
+                                        <a href=""
+                                           class="btn btn-sm rounded-pill border-1 border-muted me-1 font-14 mb-2">
+                                            <span>گوشی الجی</span>
+                                            <span class="ms-3"><i class="bi bi-x text-danger"></i></span></a>
+                                        <a href=""
+                                           class="btn btn-sm rounded-pill border-1 border-muted me-1 font-14 mb-2">
+                                            <span>دوربین 108</span>
+                                            <span class="ms-3"><i class="bi bi-x text-danger"></i></span></a>
+                                    </div>
+                                </div>
+                                <div class="item-box">
+                                    <div class="title">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="font-14">محدوده قیمت</h6>
+                                            <a class="btn border-0" data-bs-toggle="collapse" href="#collapsePrice1"
+                                               role="button" aria-expanded="false">
+                                                <i class="bi bi-chevron-down"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="desc collapse show" id="collapsePrice1">
+                                        <div class="filter-item-content">
+                                            <form action="" method="get">
+                                                <div class="form-group">
+                                                    <label>
+                                                        <input type="range" class="catRange" name="range[]">
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <label>
+                                                            <input type="number" name="" min="1500000"
+                                                                   class="form-control input-range-filter"
+                                                                   placeholder="از 1500000">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label>
+                                                            <input type="number" name="" min="1500000" max="3000000"
+                                                                   class="form-control input-range-filter"
+                                                                   placeholder="از 3000000">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-12">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-box">
+                                    <div class="title">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="font-14">فیلتر بر اساس رنگ</h6>
+                                            <a class="btn border-0" data-bs-toggle="collapse"
+                                               href="#collapseItemBoxExist1"
+                                               role="button" aria-expanded="false">
+                                                <i class="bi bi-chevron-down"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="desc collapse show" id="collapseItemBoxExist1">
+                                        <div class="filter-item-content">
+                                            <form action="">
+                                                <div class="product-meta-color-items mt-4">
+                                                    <input type="radio" class="btn-check" name="options" id="option11"
+                                                           autocomplete="off" checked>
+                                                    <label class="btn btt-light" for="option11">
+                                                        <span style="background-color: #c00;"></span>
+                                                        قرمز
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check" name="options" id="option22"
+                                                           autocomplete="off">
+                                                    <label class="btn btt-light" for="option22">
+                                                        <span style="background-color: #111;"></span>
+                                                        مشکی
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check" name="options" id="option33"
+                                                           autocomplete="off">
+                                                    <label class="btn btt-light" for="option33">
+                                                        <span style="background-color: #00cc5f;"></span>
+                                                        سبز
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check" name="options" id="option44"
+                                                           autocomplete="off">
+                                                    <label class="btn btt-light" for="option44">
+                                                        <span style="background-color: #1b69f0;"></span>
+                                                        آبی
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check" name="options" id="option55"
+                                                           autocomplete="off">
+                                                    <label class="btn btt-light" for="option55">
+                                                        <span style="background-color: #891bf0;"></span>
+                                                        بنفش
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check" name="options" id="option66"
+                                                           autocomplete="off">
+                                                    <label class="btn btt-light" for="option66">
+                                                        <span style="background-color: #f0501b;"></span>
+                                                        نارنجی
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-box item-box-color">
+                                    <div class="title">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="font-14">فیلتر براساس دسته</h6>
+                                            <a class="btn border-0" data-bs-toggle="collapse"
+                                               href="#collapseItemBoxColor1"
+                                               role="button" aria-expanded="false">
+                                                <i class="bi bi-chevron-down"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="desc collapse show" id="collapseItemBoxColor1">
+                                        <div class="filter-item-content">
+                                            <form action="">
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                    <div class="form-check">
+                                                        <label for="colorCheck1" class="form-check-label">موبایل <i
+                                                                class="bi bi-phone ms-1"></i></label>
+                                                        <input type="checkbox" name="" id="colorCheck1"
+                                                               class="form-check-input">
+                                                    </div>
+                                                    <div>
+                                                        <span class="fw-bold font-14">(27)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                    <div class="form-check">
+                                                        <label for="colorCheck5" class="form-check-label">ایرپاد <i
+                                                                class="bi bi-earbuds ms-1"></i></label>
+                                                        <input type="checkbox" name="" id="colorCheck5"
+                                                               class="form-check-input">
+                                                    </div>
+                                                    <div>
+                                                        <span class="fw-bold font-14">(32)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                    <div class="form-check">
+                                                        <label for="colorCheck4" class="form-check-label">تبلت <i
+                                                                class="bi bi-tablet ms-1"></i></label>
+                                                        <input type="checkbox" name="" id="colorCheck4"
+                                                               class="form-check-input">
+                                                    </div>
+                                                    <div>
+                                                        <span class="fw-bold font-14">(14)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                    <div class="form-check">
+                                                        <label for="colorCheck3" class="form-check-label">هدست <i
+                                                                class="bi bi-headset ms-1"></i></label>
+                                                        <input type="checkbox" name="" id="colorCheck3"
+                                                               class="form-check-input">
+                                                    </div>
+                                                    <div>
+                                                        <span class="fw-bold font-14">(8)</span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end filter mobile -->
+                <div class="row gy-4">
+                    <div class="col-lg-3 d-lg-block d-none">
+                        <div class="item-boxs position-sticky top-0">
+                            <div class="item-box">
+                                <div class="title">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="font-14">فیلتر های اعمال شده</h6>
+                                        <a class="btn border-0" data-bs-toggle="collapse" href="#collapseItemBox"
+                                           role="button" aria-expanded="false">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc collapse show" id="collapseItemBox">
+                                    <a href=""
+                                       class="btn btn-sm rounded-pill border-1 border-muted me-1 font-14 mb-2">
+                                        <span>گوشی الجی</span>
+                                        <span class="ms-3"><i class="bi bi-x text-danger"></i></span></a>
+                                    <a href=""
+                                       class="btn btn-sm rounded-pill border-1 border-muted me-1 font-14 mb-2">
+                                        <span>دوربین 108</span>
+                                        <span class="ms-3"><i class="bi bi-x text-danger"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="title">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="font-14">محدوده قیمت</h6>
+                                        <a class="btn border-0" data-bs-toggle="collapse" href="#collapsePrice"
+                                           role="button" aria-expanded="false">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc collapse show" id="collapsePrice">
+                                    <div class="filter-item-content">
+                                        <form action="" method="get">
+                                            <div class="form-group">
+                                                <label>
+                                                    <input type="range" class="catRange" name="range[]">
+                                                </label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label>
+                                                        <input type="number" name="" min="1500000"
+                                                               class="form-control input-range-filter"
+                                                               placeholder="از 1500000">
+                                                    </label>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label>
+                                                        <input type="number" name="" min="1500000" max="3000000"
+                                                               class="form-control input-range-filter"
+                                                               placeholder="از 3000000">
+                                                    </label>
+                                                </div>
+                                                <div class="col-12">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-box">
+                                <div class="title">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="font-14">فیلتر بر اساس رنگ</h6>
+                                        <a class="btn border-0" data-bs-toggle="collapse" href="#collapseItemBoxExist"
+                                           role="button" aria-expanded="false">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc collapse show" id="collapseItemBoxExist">
+                                    <div class="filter-item-content">
+                                        <form action="">
+                                            <div class="product-meta-color-items mt-4">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                       autocomplete="off" checked>
+                                                <label class="btn btt-light" for="option1">
+                                                    <span style="background-color: #c00;"></span>
+                                                    قرمز
+                                                </label>
+
+                                                <input type="radio" class="btn-check" name="options" id="option2"
+                                                       autocomplete="off">
+                                                <label class="btn btt-light" for="option2">
+                                                    <span style="background-color: #111;"></span>
+                                                    مشکی
+                                                </label>
+
+                                                <input type="radio" class="btn-check" name="options" id="option3"
+                                                       autocomplete="off">
+                                                <label class="btn btt-light" for="option3">
+                                                    <span style="background-color: #00cc5f;"></span>
+                                                    سبز
+                                                </label>
+
+                                                <input type="radio" class="btn-check" name="options" id="option4"
+                                                       autocomplete="off">
+                                                <label class="btn btt-light" for="option4">
+                                                    <span style="background-color: #1b69f0;"></span>
+                                                    آبی
+                                                </label>
+
+                                                <input type="radio" class="btn-check" name="options" id="option5"
+                                                       autocomplete="off">
+                                                <label class="btn btt-light" for="option5">
+                                                    <span style="background-color: #891bf0;"></span>
+                                                    بنفش
+                                                </label>
+
+                                                <input type="radio" class="btn-check" name="options" id="option6"
+                                                       autocomplete="off">
+                                                <label class="btn btt-light" for="option6">
+                                                    <span style="background-color: #f0501b;"></span>
+                                                    نارنجی
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-box item-box-color">
+                                <div class="title">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h6 class="font-14">فیلتر براساس دسته</h6>
+                                        <a class="btn border-0" data-bs-toggle="collapse" href="#collapseItemBoxColor"
+                                           role="button" aria-expanded="false">
+                                            <i class="bi bi-chevron-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc collapse show" id="collapseItemBoxColor">
+                                    <div class="filter-item-content">
+                                        <form action="">
+                                            <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                <div class="form-check">
+                                                    <label for="colorCheck11" class="form-check-label">موبایل <i
+                                                            class="bi bi-phone ms-1"></i></label>
+                                                    <input type="checkbox" name="" id="colorCheck11"
+                                                           class="form-check-input">
+                                                </div>
+                                                <div>
+                                                    <span class="fw-bold font-14">(27)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                <div class="form-check">
+                                                    <label for="colorCheck55" class="form-check-label">ایرپاد <i
+                                                            class="bi bi-earbuds ms-1"></i></label>
+                                                    <input type="checkbox" name="" id="colorCheck55"
+                                                           class="form-check-input">
+                                                </div>
+                                                <div>
+                                                    <span class="fw-bold font-14">(32)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                <div class="form-check">
+                                                    <label for="colorCheck44" class="form-check-label">تبلت <i
+                                                            class="bi bi-tablet ms-1"></i></label>
+                                                    <input type="checkbox" name="" id="colorCheck44"
+                                                           class="form-check-input">
+                                                </div>
+                                                <div>
+                                                    <span class="fw-bold font-14">(14)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                                                <div class="form-check">
+                                                    <label for="colorCheck33" class="form-check-label">هدست <i
+                                                            class="bi bi-headset ms-1"></i></label>
+                                                    <input type="checkbox" name="" id="colorCheck33"
+                                                           class="form-check-input">
+                                                </div>
+                                                <div>
+                                                    <span class="fw-bold font-14">(8)</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="filter-items shadow-box mb-4 bg-white p-4 rounded-4">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="filter-item">
+                                        <div class="header-form">
+                                            <form action="">
+                                                <label>
+                                                    <input type="search" class="form-control input-search"
+                                                           placeholder="جستجوی محصول">
+                                                </label>
+                                                <button type="submit" class="btn input-btn-search"><i
+                                                        class="bi bi-search"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="filter-item">
+                                        <div class="filter-item-select">
+                                            <form action="">
+                                                <div>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-5">
+                                                            <h6>نمایش بر اساس:</h6>
+                                                        </div>
+                                                        <div class="col-7">
+                                                            <label for=""></label><select name="" id=""
+                                                                                          class="form-select">
+                                                            <option value="0" selected>جدیدترین</option>
+                                                            <option value="1">بروزترین</option>
+                                                            <option value="2">گران ترین</option>
+                                                            <option value="3">داغ ترین</option>
+                                                        </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="filter-label">
+                                        <p class="text-muted text-end mb-0"> نمایش 15 کالا از 65 کالای موجود</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/television1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/product-image1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/product-image3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/product-image4.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/product-image5.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/product-image6.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/wach1.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/wach2.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-box-item border-ui bg-white w-100">
+                                    <div class="hover">
+                                        <div class="hover-btn">
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="مقایسه محصول"><i class="bi bi-arrow-left-right"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="افزودن به علاقه مندی"><i class="bi bi-heart"></i></a>
+                                            <a href="" data-bs-toggle="tooltip" data-bs-placement="left"
+                                               data-bs-title="نمایش سریع"><i class="bi bi-eye"></i></a>
+                                        </div>
+                                        <div class="hover-color">
+                                            <span style="background-color: #10b663;"></span>
+                                            <span style="background-color: #e2350a;"></span>
+                                            <span style="background-color: #fafafa;"></span>
+                                        </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="image text-center">
+                                            <img src="/static/image/product/wach3.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="desc">
+                                            <div class="title">
+                                                <h6 class="title-fa def-color fw-bold text-overflow-2">
+                                                    ساعت هوشمند سامسونگ مدل Galaxy Watch3 SM-R840 45mm بند چرمی
+                                                </h6>
+                                            </div>
+                                            <div class="foot d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <div class="add" data-hint="افزودن به سبد خرید">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                                                        </svg>
+                                                    </div>
+
+                                                </div>
+                                                <div class="price d-flex flex-column justify-content-end">
+                                                    <div>
+                                                        <span class="fw-bold font-18 def-color">299,000</span>
+                                                        <span class="badge main-color-two-bg rounded-pill">25%</span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <span class="text-muted font-14 text-decoration-line-through">150,000</span>
+                                                        <span class="text-muted font-14 ms-2">تومان</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-paginate mt-5">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link rounded-3" href="#"><i class="bi bi-chevron-right"></i></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link rounded-3" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">...</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">14</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">15</a></li>
+                                    <li class="page-item"><a class="page-link rounded-3" href="#">16</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link rounded-3" href="#"><i class="bi bi-chevron-left"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="content-box">
+                            <div class="container-fluid">
+                                <div class="product-desc-content">
+                                    <input class="read-more-state" id="readMore3" type="checkbox">
+                                    <!-- والد بیشتر ، کمتر ، تمام متن توضیحات باید داخل این تگ قرار بگیرند -->
+                                    <div class="read-more-wrap">
+                                        <h6 class="font-22 mb-2 title-font title-line-bottom">دسته بندی پوشاک</h6>
+
+                                        <p>
+                                            اگر به دنبال تهیه یک هدفون بی‌سیم گیمینگ هستید، هدفون
+                                            بلوتوثی مدل K55
+                                            به‌عنوان
+                                            یکی از جدیدترین گزینه‌های موجود در بازار ارزش بررسی را
+                                            دارد. این مدل با
+                                            ابعادی
+                                            کوچک تولید شده است. ابعاد و وزن کم آن، جابه‌جایی این
+                                            وسیله و استفاده
+                                            طولانی‌مدت
+                                            از آن را آسان می‌کند و باعث خستگی گوش‌ها نخواهد شد. این
+                                            مدل برای اتصال
+                                            به
+                                            دستگاه‌ به بلوتوث نسخه 5.0 مجهز شده است و در مدت زمان
+                                            اندکی، اتصال با
+                                            گوشی
+                                            موبایل اندروید یا ios شما برقرار خواهد شد. هدفون بی سیم
+                                            K55 دارای یک
+                                            میکروفون با
+                                            کیفیت است و ...
+                                        </p>
+
+                                        <!-- متن بیشتر -->
+                                        <div class="read-more-target">
+                                            <p>
+                                                و این ویژگی، آن را برای مکالمه مناسب می‌سازد. از ویژگی‌های
+                                                اصلی این محصول محفظه نگهدارنده یا همان کیس آن است. این کیس
+                                                قابلیت شارژ هدفون را دارد. برای شارژ آن کافی است از درگاه
+                                                USB-C تعبیه شده بر روی کیس و کابل شارژ درون بسته‌بندی
+                                                استفاده کنید. گفتنی است باتری 400 میلی‌آمپر ساعتی این هدفون
+                                                در حدود 4-6 ساعت مکالمه و 4-6 ساعت پخش موسیقی را پاسخ‌گو
+                                                خواهد بود.
+                                            </p>
+                                        </div>
+                                        <!-- پایان متن بیشتر -->
+                                    </div>
+                                    <!-- پایان والد بیشتر کمتر -->
+                                    <label class="read-more-trigger" for="readMore3"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--============ end main content ==============-->
+{% endblock %}
+
+
+
+{% block footer_references %}
+    <!-- initial bootstrap slider -->
+    <script src="/static/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            ////slider range
+            $(".catRange").slider({
+                id: "slider5b",
+                min: 1500000,
+                max: 3000000,
+                range: true,
+                step: 10000,
+                value: [1500000, 3000000],
+                rtl: 'false',
+                formatter: function formatter(val) {
+                    if (Array.isArray(val)) {
+                        return val[0] + " تومان " + "  تا   " + val[1] + " تومان ";
+                    } else {
+                        return val;
+                    }
+                },
+            });
+        });
+    </script>
+    <!-- ==== end range slider -->
+{% endblock %}

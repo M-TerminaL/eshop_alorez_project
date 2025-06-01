@@ -1,6 +1,6 @@
 from django.http import HttpRequest, Http404
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from .models import Product
 from rest_framework import generics
 from .serializers import ProductDetailSerializer
@@ -8,10 +8,8 @@ from .serializers import ProductDetailSerializer
 
 # Create your views here.
 
-# ----
-# Method A
-# use function base view for product detail view page
-# ----
+
+# use function base view for product detail view page (Method A)
 def product_detail(request: HttpRequest, slug):
     # try:
     #     product = Product.objects.get(url_title=slug, is_active=True, is_delete=False)
@@ -25,9 +23,8 @@ def product_detail(request: HttpRequest, slug):
 
 
 # ----
-# Method B
-# use Class Base view for product detail view page
-# ----
+
+# use Class Base view for product detail view page ( Used This Method in urls ) (Method B)
 class ProductDetailView(DetailView):
     template_name = 'product_module/product_detail.html'
     model = Product
@@ -39,10 +36,29 @@ class ProductDetailView(DetailView):
 
 
 # ----
-# use Api view for product detail view page
-# ----
 
+# use Api view for product detail view page
 class ProductDetailGenericApiView(generics.RetrieveAPIView):
     queryset = Product.objects.filter(is_active=True, is_delete=False)
     serializer_class = ProductDetailSerializer
     lookup_field = 'slug'
+
+
+# ----
+# use function base view for products list page
+def product_list(request):
+    products = Product.objects.filter(is_active=True, is_delete=False)
+    context = {
+        'products': products
+    }
+    return render(request, 'product_module/product_list.html', context)
+
+
+# ----
+# use Class base view for products list page ( Method B ) (used this way in urls)
+class ProductListView(ListView):
+    template_name = 'product_module/product_list.html'
+    model = Product
+    context_object_name = 'products'
+    ordering = 9
+# ----
