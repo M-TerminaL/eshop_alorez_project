@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.crypto import get_random_string
 
+
 # Create your models here.
 class ProductCategory(models.Model):
     fa_title = models.CharField(max_length=50, verbose_name='عنوان دسته بندی به فارسی')
@@ -58,17 +59,18 @@ class Product(models.Model):
     en_title = models.CharField(max_length=400, verbose_name='نام کالا به انگلیسی')
     short_title = models.CharField(max_length=100, verbose_name='عنوان کوتاه')
     slug = models.SlugField(max_length=300, verbose_name='عنوان در url', allow_unicode=True, unique=True,
-                                 db_index=True, null=True, blank=True, default='')
+                            db_index=True, null=True, blank=True, default='')
     category = models.ManyToManyField(ProductCategory, verbose_name='دسته بندی کالا', related_name='products')
     brand = models.ForeignKey(to=ProductBrand, on_delete=models.CASCADE, verbose_name='برند کالا',
                               related_name='products', null=True)
     seller = models.ForeignKey(Seller, on_delete=models.CASCADE, verbose_name='فروشنده کالا', related_name='products')
     inventory = models.PositiveIntegerField(default=1, verbose_name='موجودی کالا')
-    price = models.IntegerField(verbose_name='قیمت به ریال', help_text='قیمت پیش از تخفیف مد نظر است.')
+    price = models.IntegerField(verbose_name='قیمت به تومان', help_text='قیمت پیش از تخفیف مد نظر است.')
     off = models.IntegerField(verbose_name='درصد تخفیف', help_text='مقدار عددی وارد شود', default=0)
     new_price = models.IntegerField(verbose_name='قیمت با تخفیف', null=True, blank=True,
                                     help_text='این فیلد به صورت خودکار جنریت میشود.')
-    identify = models.CharField(max_length=8, verbose_name='شناسه کالا', null=False, default='', blank=True, unique=True,
+    identify = models.CharField(max_length=8, verbose_name='شناسه کالا', null=False, default='', blank=True,
+                                unique=True,
                                 help_text='این فیلد به صورت خودکار جنریت میشود.')
     description = models.TextField(verbose_name='توضیحات کالا')
     created_at = models.DateTimeField(verbose_name='تاریخ ایجاد', auto_now_add=True)
@@ -90,6 +92,7 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         self.identify = get_random_string(length=8)
         return super().save(*args, **kwargs)
+
 
 class Slider(models.Model):
     image = models.ImageField(upload_to='shop/products/product_images/%Y/%m/%d', verbose_name='تصویر محصول')
@@ -205,6 +208,8 @@ class ProductDescription(models.Model):
                                    verbose_name='کالا')
     title = models.CharField(max_length=50, verbose_name='عنوان', default='معرفی محصول')
     description = models.TextField(verbose_name='معرفی و توضیحات محصول')
+    more_description = models.TextField(verbose_name='توضیحات بیشتر', null=True, blank=True,
+                                        help_text='اگر در فیلد قبلی، توضیحات شما زیاد است لطفا در این قسمت ادامه ی ان را بنویسید')
 
     def __str__(self):
         return self.title

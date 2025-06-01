@@ -118,7 +118,7 @@
                                         <h4 class="f-800 my-1">
                                             {{ product.fa_title }}
                                         </h4>
-                                        <p class="text-muted">{{ product.en_title}} </p>
+                                        <p class="text-muted">{{ product.en_title }} </p>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +141,8 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a href="" class="nav-link font-16 text-muted"><span
-                                                        class="fw-bold font-16">شناسه محصول:</span> {{ product.identify }}</a>
+                                                        class="fw-bold font-16">شناسه محصول:</span> {{ product.identify }}
+                                                </a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -154,86 +155,65 @@
                                                 <input type="checkbox" class="read-more-state" id="readMore1">
                                                 <ul class="read-more-wrap navbar-nav">
                                                     {% for specification in product.product_specifications.all %}
-                                                    <li class="{% if forloop.counter > 3 %}read-more-target{% endif %}">
-                                                        <span class="title">{{ specification.key }} :</span>
-                                                        <span class="desc">{{ specification.value }}</span>
-                                                    </li>
+                                                        <li class="{% if forloop.counter > 3 %}read-more-target{% endif %}">
+                                                            <span class="title">{{ specification.key }} :</span>
+                                                            <span class="desc">{{ specification.value }}</span>
+                                                        </li>
                                                     {% endfor %}
                                                 </ul>
                                                 <label for="readMore1" class="read-more-trigger"></label>
                                             </div>
                                         </div>
+                                        {% comment %}product colors{% endcomment %}
+
                                         <div class="product-meta-color">
-                                            <h5 class="font-16 icon-circle">
-                                                انتخاب رنگ کالا
-                                            </h5>
+                                            {% if product.product_color.exists %}
+                                                <h5 class="font-16 icon-circle">
+                                                    انتخاب رنگ کالا
+                                                </h5>
+                                            {% endif %}
+
+
                                             <div class="product-meta-color-items">
-                                                <input autocomplete="off" checked class="btn-check" id="option1"
-                                                       name="options"
-                                                       type="radio">
-                                                <label class="btn " for="option1">
-                                                    <span style="background-color: #c00;"></span>
-                                                    قرمز
-                                                </label>
-
-                                                <input autocomplete="off" class="btn-check" id="option2" name="options"
-                                                       type="radio">
-                                                <label class="btn " for="option2">
-                                                    <span style="background-color: #111;"></span>
-                                                    مشکی
-                                                </label>
-
-                                                <input autocomplete="off" class="btn-check" disabled id="option3"
-                                                       name="options"
-                                                       type="radio">
-                                                <label class="btn " for="option3">
-                                                    <span style="background-color: #00cc5f;"></span>
-                                                    سبز
-                                                </label>
-
-                                                <input autocomplete="off" class="btn-check" id="option4" name="options"
-                                                       type="radio">
-                                                <label class="btn " for="option4">
-                                                    <span style="background-color: #1b69f0;"></span>
-                                                    آبی
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="product-meta-color mt-4">
-                                            <h5 class="font-16 icon-circle">
-                                                انتخاب سایز
-                                            </h5>
-                                            <div class="product-meta-color-items">
-                                                <input type="radio" class="btn-check" name="options-two" id="option11"
-                                                       autocomplete="off"
-                                                       checked>
-                                                <label class="btn px-4 rounded-3 " for="option11">
-                                                    sm
-                                                </label>
-
-                                                <input type="radio" class="btn-check" name="options-two" id="option12"
-                                                       autocomplete="off"
-                                                       checked>
-                                                <label class="btn px-4 rounded-3 " for="option12">
-                                                    md
-                                                </label>
-
-                                                <input type="radio" class="btn-check" name="options-two" id="option13"
-                                                       autocomplete="off"
-                                                       checked>
-                                                <label class="btn px-4 rounded-3" for="option13">
-                                                    lg
-                                                </label>
-
-                                                <input type="radio" class="btn-check" name="options-two" id="option14"
-                                                       autocomplete="off"
-                                                       checked>
-                                                <label class="btn px-4 rounded-3 " for="option14">
-                                                    xl
-                                                </label>
+                                                {% if product.product_color.exists %}
+                                                    {% for color in product.product_color.all %}
+                                                        <input autocomplete="off" checked class="btn-check"
+                                                               id="option{{ forloop.counter }}"
+                                                               name="options"
+                                                               type="radio">
+                                                        <label class="btn " for="option{{ forloop.counter }}">
+                                                            <span style="background-color: {{ color.color_hex }};"></span>
+                                                            {{ color.name }}
+                                                        </label>
+                                                    {% endfor %}
+                                                {% endif %}
 
                                             </div>
+
                                         </div>
+
+
+                                        {% comment %}product size{% endcomment %}
+                                        {% if product.product_size.exists %}
+                                            <div class="product-meta-color mt-4">
+                                                <h5 class="font-16 icon-circle">
+                                                    انتخاب سایز
+                                                </h5>
+                                                <div class="product-meta-color-items">
+                                                    {% for size in product.product_size.all %}
+                                                        <input type="radio" class="btn-check" name="options-two"
+                                                               id="option1{{ forloop.counter }}"
+                                                               autocomplete="off"
+                                                               checked>
+                                                        <label class="btn px-4 rounded-3 "
+                                                               for="option1{{ forloop.counter }}">
+                                                            {{ size.name }}
+                                                        </label>
+                                                    {% endfor %}
+                                                </div>
+
+                                            </div>
+                                        {% endif %}
                                     </div>
                                     <div class="col-12">
                                         <div class="product-meta-action mt-0 bottom-border border-top">
@@ -241,9 +221,9 @@
                                                 <div class="col-sm-6">
                                                     <div class="d-flex align-items-center justify-content-sm-start justify-content-center">
                                                         <p class="mb-0 old-price font-22 text-muted-two text-decoration-line-through me-3">
-                                                            1,500,000</p>
+                                                            {{ product.price }}</p>
                                                         <h6 class="font-30 fw-bold new-price main-color-one-color">
-                                                            1,200,000
+                                                            {{ product.new_price }}
                                                             تومان</h6>
                                                     </div>
                                                 </div>
@@ -506,40 +486,16 @@
                                             <input type="checkbox" class="read-more-state" id="readMore3"/>
                                             <!-- والد بیشتر ، کمتر ، تمام متن توضیحات باید داخل این تگ قرار بگیرند -->
                                             <div class="read-more-wrap">
-                                                <h6 class="font-22 mb-2 title-font">معرفی محصول</h6>
+                                                <h6 class="font-22 mb-2 title-font">{{ product.product_desc.title }}</h6>
 
                                                 <p>
-                                                    اگر به دنبال تهیه یک هدفون بی‌سیم گیمینگ هستید، هدفون
-                                                    بلوتوثی مدل K55
-                                                    به‌عنوان
-                                                    یکی از جدیدترین گزینه‌های موجود در بازار ارزش بررسی را
-                                                    دارد. این مدل با
-                                                    ابعادی
-                                                    کوچک تولید شده است. ابعاد و وزن کم آن، جابه‌جایی این
-                                                    وسیله و استفاده
-                                                    طولانی‌مدت
-                                                    از آن را آسان می‌کند و باعث خستگی گوش‌ها نخواهد شد. این
-                                                    مدل برای اتصال
-                                                    به
-                                                    دستگاه‌ به بلوتوث نسخه 5.0 مجهز شده است و در مدت زمان
-                                                    اندکی، اتصال با
-                                                    گوشی
-                                                    موبایل اندروید یا ios شما برقرار خواهد شد. هدفون بی سیم
-                                                    K55 دارای یک
-                                                    میکروفون با
-                                                    کیفیت است و ...
+                                                    {{ product.product_desc.description }}
                                                 </p>
 
                                                 <!-- متن بیشتر -->
                                                 <div class="read-more-target">
                                                     <p>
-                                                        و این ویژگی، آن را برای مکالمه مناسب می‌سازد. از ویژگی‌های
-                                                        اصلی این محصول محفظه نگهدارنده یا همان کیس آن است. این کیس
-                                                        قابلیت شارژ هدفون را دارد. برای شارژ آن کافی است از درگاه
-                                                        USB-C تعبیه شده بر روی کیس و کابل شارژ درون بسته‌بندی
-                                                        استفاده کنید. گفتنی است باتری 400 میلی‌آمپر ساعتی این هدفون
-                                                        در حدود 4-6 ساعت مکالمه و 4-6 ساعت پخش موسیقی را پاسخ‌گو
-                                                        خواهد بود.
+                                                        {{ product.product_desc.more_description }}
                                                     </p>
                                                 </div>
                                                 <!-- پایان متن بیشتر -->
@@ -620,6 +576,8 @@
                                                                                       alt="گوشی موبایل شیائومی مدل Redmi 9A">
                                                     </figure>
                                                     <p>&nbsp;</p>
+
+
                                                     <h2 class="font-26 mb-2">صفحه نمایش شیائومی ردمی 9a</h2>
                                                     <p>برای گوشی Redmi 9A از صفحه نمایش ۶.۵ اینچی با وضوح HD+ یا ۷۲۰
                                                         در ۱۶۰۰
