@@ -1,7 +1,7 @@
 from django.http import HttpRequest, Http404
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, ListView
-from .models import Product
+from .models import Product, ProductComment
 from rest_framework import generics
 from .serializers import ProductDetailSerializer
 
@@ -28,6 +28,14 @@ def product_detail(request: HttpRequest, slug):
 class ProductDetailView(DetailView):
     template_name = 'product_module/product_detail.html'
     model = Product
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        slug = self.kwargs.get('slug')
+        main_product_comments = ProductComment.objects.filter(product__slug=slug, status='PB',
+                                                              parent=None).prefetch_related('productcomment_set')
+        context['main_product_comments'] = main_product_comments
+        return context
 
     def get_queryset(self):
         base_query = super().get_queryset()

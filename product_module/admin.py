@@ -137,7 +137,7 @@ class ProductCommentAdmin(admin.ModelAdmin):
     def get_created_jalali(self, obj):
         return datetime2jalali(obj.created_at).strftime('%a, %d %b %Y %H:%M:%S')
 
-    list_display = ['name', 'email', 'product', 'rating', 'get_created_jalali', 'status']
+    list_display = ['name', 'email', 'product', 'user', 'rating', 'get_created_jalali', 'status']
     search_fields = ['name', 'email']
     list_filter = ['status', 'rating']
     list_per_page = 10

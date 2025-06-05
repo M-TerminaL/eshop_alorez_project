@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils.crypto import get_random_string
+from django.contrib.auth import get_user_model
 
 
 # Create your models here.
@@ -147,6 +148,9 @@ class ProductSize(models.Model):
         return self.name
 
 
+User = get_user_model()
+
+
 class ProductComment(models.Model):
     class CommentStatus(models.TextChoices):
         PENDING = 'DF', 'Pending - (در دست بررسی)'
@@ -156,11 +160,13 @@ class ProductComment(models.Model):
     product = models.ForeignKey(to=Product, on_delete=models.CASCADE, verbose_name='کالا', related_name='comments')
     parent = models.ForeignKey(to='ProductComment', on_delete=models.CASCADE, verbose_name='پاسخ نظر', null=True,
                                blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='کاربر', related_name='user_comments',
+                             null=True, blank=True)
     name = models.CharField(max_length=30, verbose_name='نام')
     email = models.EmailField(verbose_name='ایمیل')
     text = models.TextField(verbose_name='متن نظر')
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], verbose_name='امتیاز',
-                                 default=0)
+                                 default=1)
     created_at = models.DateTimeField(verbose_name='تاریخ ایجاد', auto_now_add=True)
     status = models.CharField(max_length=2, choices=CommentStatus.choices, default=CommentStatus.PENDING,
                               verbose_name='وضعیت')

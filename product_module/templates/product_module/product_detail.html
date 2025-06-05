@@ -1,4 +1,10 @@
 {% extends 'shared/_layout.html' %}
+{% load jalali_tags %}
+
+
+
+
+
 
 {% block title %}
     {{ product.fa_title }}
@@ -1328,103 +1334,178 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="comment mb-4">
-                                            <div class="title border-ui">
-                                                <div class="row align-items-center">
-                                                    <div class="col-sm-10">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="avatar-img p-2 bg-white shadow-box rounded-circle">
-                                                                <img src="/static/image/user.jpg" alt=""
-                                                                     class="img-fluid rounded-circle">
+
+
+                                        {% for main_comment in main_product_comments %}
+                                            <div class="comment mb-4">
+                                                <div class="title border-ui">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-sm-10">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="avatar-img p-2 bg-white shadow-box rounded-circle">
+                                                                    <img src="/static/image/user.jpg" alt=""
+                                                                         class="img-fluid rounded-circle">
+                                                                </div>
+                                                                <div class="d-flex flex-wrap align-items-center ms-2">
+                                                                    <h6 class="text-muted font-14">{{ main_comment.name }}</h6>
+                                                                    <h6 class="text-muted font-14 ms-2">{{ main_comment.created_at | to_jalali }}
+                                                                    </h6>
+                                                                </div>
                                                             </div>
-                                                            <div class="d-flex flex-wrap align-items-center ms-2">
-                                                                <h6 class="text-muted font-14">امیر رضایی</h6>
-                                                                <h6 class="text-muted font-14 ms-2">1 دی ماه 1401
-                                                                </h6>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="d-flex star justify-content-end">
+                                                                {% for i in '12345' %}
+                                                                    {% if forloop.counter <= main_comment.rating %}
+                                                                        <i class="bi bi-star-fill"></i>
+                                                                    {% else %}
+                                                                        <i class="bi bi-star"></i>
+                                                                    {% endif %}
+                                                                {% endfor %}
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <div class="d-flex star justify-content-end">
-                                                            <i class="bi bi-star"></i>
-                                                            <i class="bi bi-star-fill"></i>
-                                                            <i class="bi bi-star-fill"></i>
-                                                            <i class="bi bi-star-fill"></i>
-                                                            <i class="bi bi-star-fill"></i>
+                                                </div>
+                                                <div class="desc py-3">
+                                                    <p class="font-14 text-muted">
+                                                        {{ main_comment.text }}
+                                                    </p>
+                                                </div>
+                                                <div class="foot">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-8">
+                                                            <div class="comment-rates">
+
+                                                                {% if main_comment.strengths.exists %}
+                                                                    <div class="positive rounded-4">
+                                                                        <div class="d-flex align-items-center justify-content-start flex-wrap">
+                                                                            <h6 class="font-14 me-3">نقاط قوت</h6>
+                                                                            <nav class="navbar navbar-expand positive-nav">
+                                                                                <ul class="navbar-nav flex-wrap">
+                                                                                    {% for strength in main_comment.strengths.all %}
+                                                                                        <li class="nav-item"><span
+                                                                                                class="nav-link font-14">{{ strength.value }}</span>
+                                                                                        </li>
+                                                                                    {% endfor %}
+                                                                                </ul>
+                                                                            </nav>
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+
+                                                                {% if main_comment.weak.exists %}
+                                                                    <div class="negitive rounded-4">
+                                                                        <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                                                            <h6 class="font-14 me-3">نقاط ضعف</h6>
+                                                                            <nav class="navbar navbar-expand negitive-nav">
+                                                                                <ul class="navbar-nav flex-wrap">
+                                                                                    {% for weak_ in main_comment.weak.all %}
+                                                                                        <li class="nav-item"><span
+                                                                                                class="nav-link font-14">{{ weak_.value }}</span>
+                                                                                        </li>
+                                                                                    {% endfor %}
+                                                                                </ul>
+                                                                            </nav>
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="comment-reply">
+                                                                <a href=""
+                                                                   class="span-primary px-4">پاسخ</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="desc py-3">
-                                                <p class="font-14 text-muted">
-                                                    بنده این گوشی را خریداری کردم و کاملا راضی هشتم و بهترین گارانتی
-                                                    را دارد
-                                                    و پلپ بود و حتما به شما هم پیشنهاد می نمایم که چنانچه قصد خرید
-                                                    این کالا
-                                                    را دارید از دیجی کالا تهیه نمایید ؛پارت نامبر من هم سنگاپور بود
-                                                    که
-                                                    بهترین پارت نامبر در بازار است و هیچ محدودیتی ندارد.
-                                                </p>
-                                            </div>
-                                            <div class="foot">
-                                                <div class="row align-items-center">
-                                                    <div class="col-md-8">
-                                                        <div class="comment-rates">
-                                                            <div class="positive rounded-4">
-                                                                <div class="d-flex align-items-center justify-content-start flex-wrap">
-                                                                    <h6 class="font-14 me-3">نقاط قوت</h6>
-                                                                    <nav class="navbar navbar-expand positive-nav">
-                                                                        <ul class="navbar-nav flex-wrap">
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">جنس
-                                                                                            بدنه</span>
-                                                                            </li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">کیفیت
-                                                                                            تصویر</span></li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">شارژ
-                                                                                            باطری</span></li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">دوربین
-                                                                                            قوی</span></li>
-                                                                        </ul>
-                                                                    </nav>
+
+                                            {% for answer_sub_comment in main_comment.productcomment_set.all %}
+                                                <div class="comment mb-4 ms-5">
+                                                    <div class="title border-ui">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-10">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="avatar-img p-2 bg-white shadow-box rounded-circle">
+                                                                        <img src="/static/image/user.jpg" alt=""
+                                                                             class="img-fluid rounded-circle">
+                                                                    </div>
+                                                                    <div class="d-flex flex-wrap align-items-center ms-2">
+                                                                        <h6 class="text-muted font-14">{{ answer_sub_comment.name }}</h6>
+                                                                        <h6 class="text-muted font-14 ms-2">{{ answer_sub_comment.created_at | to_jalali }}
+                                                                        </h6>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="negitive rounded-4">
-                                                                <div class="d-flex flex-wrap align-items-center justify-content-start">
-                                                                    <h6 class="font-14 me-3">نقاط ضعف</h6>
-                                                                    <nav class="navbar navbar-expand negitive-nav">
-                                                                        <ul class="navbar-nav flex-wrap">
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">جنس
-                                                                                            بدنه</span>
-                                                                            </li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">کیفیت
-                                                                                            تصویر</span></li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">شارژ
-                                                                                            باطری</span></li>
-                                                                            <li class="nav-item"><span
-                                                                                    class="nav-link font-14">دوربین
-                                                                                            قوی</span></li>
-                                                                        </ul>
-                                                                    </nav>
+                                                            <div class="col-sm-2">
+                                                                <div class="d-flex star justify-content-end">
+
+
+                                                                    {% for i in '12345' %}
+                                                                        {% if forloop.counter <= answer_sub_comment.rating %}
+                                                                            <i class="bi bi-star-fill"></i>
+                                                                        {% else %}
+                                                                            <i class="bi bi-star"></i>
+                                                                        {% endif %}
+                                                                    {% endfor %}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="comment-reply">
-                                                            <a href=""
-                                                               class="span-primary px-4">پاسخ</a>
+                                                    <div class="desc py-3">
+                                                        <p class="font-14 text-muted">
+                                                            {{ answer_sub_comment.text }}
+                                                        </p>
+                                                    </div>
+                                                    <div class="foot">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-8">
+                                                                <div class="comment-rates">
+
+                                                                    {% if answer_sub_comment.strengths.exists %}
+                                                                        <div class="positive rounded-4">
+                                                                            <div class="d-flex align-items-center justify-content-start flex-wrap">
+                                                                                <h6 class="font-14 me-3">نقاط قوت</h6>
+                                                                                <nav class="navbar navbar-expand positive-nav">
+                                                                                    <ul class="navbar-nav flex-wrap">
+                                                                                        {% for strength in answer_sub_comment.strengths.all %}
+                                                                                            <li class="nav-item"><span
+                                                                                                    class="nav-link font-14">{{ strength.value }}</span>
+                                                                                            </li>
+                                                                                        {% endfor %}
+                                                                                    </ul>
+                                                                                </nav>
+                                                                            </div>
+                                                                        </div>
+                                                                    {% endif %}
+
+                                                                    {% if answer_sub_comment.weak.exists %}
+                                                                        <div class="negitive rounded-4">
+                                                                            <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                                                                <h6 class="font-14 me-3">نقاط ضعف</h6>
+                                                                                <nav class="navbar navbar-expand negitive-nav">
+                                                                                    <ul class="navbar-nav flex-wrap">
+                                                                                        {% for weak_ in answer_sub_comment.weak.all %}
+                                                                                            <li class="nav-item"><span
+                                                                                                    class="nav-link font-14">{{ weak_.value }}</span>
+                                                                                            </li>
+                                                                                        {% endfor %}
+                                                                                    </ul>
+                                                                                </nav>
+                                                                            </div>
+                                                                        </div>
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            {% endfor %}
+
+                                        {% endfor %}
+
+
                                     </div>
                                 </div>
                             </div>
